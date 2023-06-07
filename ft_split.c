@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:30 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 10:20:11 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 13:35:04 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_howmany(char const *s, char c)
+int	ft_howmany2(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	z = 0;
 	k = 0;
 	len = (int)ft_strlen(s);
-	size_strings = ft_howmany(s, c);
+	size_strings = ft_howmany2(s, c);
 	arr = malloc((size_strings + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);

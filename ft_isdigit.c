@@ -6,16 +6,13 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:38:59 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/03 15:45:15 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:19:43 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	unsigned char	num;
-
-	num = c;
-	if (num >= '0' && num <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

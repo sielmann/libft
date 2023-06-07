@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:42:05 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/23 09:35:27 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:29:23 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*d_cpy;
 	char	*s_cpy;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	d_cpy = (char *)dest;
 	s_cpy = (char *)src;
@@ -28,5 +28,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		d_cpy[i] = s_cpy[i];
 		i++;
 	}
+	//d_cpy[i] = '\0';
 	return (dest);
 }

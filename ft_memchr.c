@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:50:27 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/23 09:58:04 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:42:09 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (i < n)
 	{
 		if (*(char *)(s + i) == (char)c)

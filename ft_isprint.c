@@ -6,16 +6,13 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:39:55 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/03 15:26:00 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:21:59 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	unsigned char	ispr;
-
-	ispr = c;
-	if (ispr >= 32 && ispr <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:54:06 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/23 09:49:42 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:32:13 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	s_cpy = (char *)str;
 	cc = (char)c;
-	if (!str || !s_cpy)
-		return (NULL);
+	//	if (!str || !s_cpy)
+	//	return (NULL);
 	while (s_cpy[i])
 	{
 		if (s_cpy[i] == cc)
