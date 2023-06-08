@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 09:19:31 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 14:07:05 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/08 12:09:36 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ t_list	*ft_lstlast(t_list *lst)
 		return (lst);
 	while (lst)
 	{
-	  if (lst->next == NULL)
-		return (lst);
-	  lst = lst->next;
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
 	return (lst);
 }

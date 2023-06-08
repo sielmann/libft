@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:50:23 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 17:37:27 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/08 12:10:26 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 	while (i < num)
 	{
 		if (ptr1_c[i] != ptr2_c[i])
-		  return (ptr1_c[i] - ptr2_c[i]);
+			return (ptr1_c[i] - ptr2_c[i]);
 		i++;
 	}
 	return (0);

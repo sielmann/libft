@@ -6,11 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:42:05 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 14:29:23 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/08 12:11:34 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -28,6 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		d_cpy[i] = s_cpy[i];
 		i++;
 	}
-	//d_cpy[i] = '\0';
 	return (dest);
 }

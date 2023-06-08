@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:38 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 10:48:39 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/08 15:03:30 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_theend(s1, set);
 	if (start > end)
 		len = 0;
-	len = end - start;
-	new_str = (char *)malloc(sizeof(char) * (len + 1));
+	len = end - start + 1;
+	new_str = ft_substr(s1, start, len);
 	if (!new_str)
-		return (NULL);
-	new_str = ft_substr(s1, start, end);
+		return (0);
 	return (new_str);
 }

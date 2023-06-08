@@ -6,13 +6,13 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:37:56 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 14:18:17 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/08 12:08:21 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	  return (1);
+		return (1);
 	return (0);
 }
