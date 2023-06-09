@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:38 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/08 15:03:30 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/09 20:57:58 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 	int		len;
-	int		i;
 
-	i = 0;
 	if (!s1 || !set)
 		return (ft_strdup(""));
 	start = ft_thestart(s1, set);
