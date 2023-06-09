@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:30 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/08 17:23:40 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/09 11:49:13 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,13 @@ void	ft_free_split(char **arr)
 char *find_word(char **arr, char *str)
 {
   int count;
+  int j;
 
+  j = 0;
   count = 0;
   while (str[i])
   {
+	count = 0;
   	while (str[i] == ' ')
 	 	i++;
    	while (str[i] != ' ')
@@ -60,7 +63,10 @@ char *find_word(char **arr, char *str)
 		count++:
 		i++;
     }
-	}	
+	arr[j] = malloc(sizeof(char) * (count + 1));
+	j++;
+	i++;
+   	}	
 }
 
 char	**ft_split(char const *s, char c)
