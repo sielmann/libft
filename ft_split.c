@@ -6,141 +6,81 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:30 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/09 11:49:13 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/09 13:33:14 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 int	ft_howmany2(char const *s, char c)
 {
-	int	i;
+	int	is_char;
 	int	count;
 
-	i = 0;
-	count = 1;
-	while (s[i] != '\0')
+	is_char = 0;
+	count = 0;
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s != c && !is_char)
+		  {
 			count++;
-		i++;
+			is_char = 1;
+		  }
+		else if (*s == c)
+		  is_char = 0;
+		s++;
 	}
 	return (count);
 }
 
-void	ft_free_split(char **arr)
+void	*ft_free_split(char **arr, int i)
 {
-	int	i;
-
-	i = 0;
 	if (arr == NULL)
-		return ;
+	  return (NULL);
 	while (arr[i] != NULL)
 	{
 		free(arr[i]);
 		i++;
 	}
 	free(arr);
+	return (NULL);
 }
 
-char *find_word(char **arr, char *str)
+char	*ft_find_word(char const *s, char c, size_t *start)
 {
-  int count;
-  int j;
+	size_t	end;
+	char	*word;
 
-  j = 0;
-  count = 0;
-  while (str[i])
-  {
-	count = 0;
-  	while (str[i] == ' ')
-	 	i++;
-   	while (str[i] != ' ')
-	{
-		count++:
-		i++;
-    }
-	arr[j] = malloc(sizeof(char) * (count + 1));
-	j++;
-	i++;
-   	}	
+	while (s[*start] == c)
+		(*start)++;
+	end = *start;
+	while (s[end] && s[end] != c)
+		end++;
+	word = ft_substr(s, *start, end - *start);
+	*start = end;
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		z;
-	int		k;
-	int		size_strings;
+	size_t	size_strings;
+	size_t	i;
+	size_t	start;
 	char	**arr;
-	int		len;
 
 	i = 0;
-	j = 0;
-	z = 0;
-	k = 0;
-	len = (int)ft_strlen(s);
+	start = 0;
 	size_strings = ft_howmany2(s, c);
-	arr = malloc((size_strings + 1) * sizeof(char *));
+	arr = (char **)ft_calloc((size_strings + 1), sizeof(char *));
 	if (!arr)
 		return (NULL);
-   	while (i < size_strings)
+	while (i < size_strings)
 	{
-		arr[i] = malloc(sizeof(char) * (len + 1));
-		if (!arr[i])
-		{
-			while (k < i)
-			{
-				free(arr[k]);
-				k++;
-			}
-			free(arr);
-		}
-		i++;
-		}
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			arr[j][z] = '\0';
-			j++;
-			z = 0;
-		}
-		else
-		{
-			arr[j][z] = s[i];
-			z++;
-		}
+		arr[i] = ft_find_word(s, c, &start);
+			if (!arr[i])
+				return (ft_free_split(arr, i));
 		i++;
 	}
-	arr[j][z] = '\0';
-	arr[size_strings] = NULL;
+	arr[i] = NULL;
 	return (arr);
 }
-/*
-int main(void)
-{
-  char *s = "hola como estas";
-  char c = 'a';
-
-  char **arr = ft_split(s, c);
-  if (!arr)
-     {
-        int i = 0;
-        while (arr[i] != NULL)
-        {
-            printf("%s\n", arr[i]);
-            i++;
-        }
-
-       ft_free_split(arr);
-    }
-  return (0);
-}
-
-*/
