@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 09:22:21 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/09 20:59:53 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:30:24 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*tmp;
 	t_list	*new_list;
-	void *aux;
+	void	*aux;
 
 	if (!lst || !f || !del)
 		return (NULL);

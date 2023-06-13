@@ -6,7 +6,7 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:30 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/09 13:33:14 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:29:45 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,23 @@ int	ft_howmany2(char const *s, char c)
 	while (*s)
 	{
 		if (*s != c && !is_char)
-		  {
+		{
 			count++;
 			is_char = 1;
-		  }
+		}
 		else if (*s == c)
-		  is_char = 0;
+			is_char = 0;
 		s++;
 	}
 	return (count);
 }
 
-void	*ft_free_split(char **arr, int i)
+void	*ft_free_split(char **arr, size_t i)
 {
 	if (arr == NULL)
-	  return (NULL);
-	while (arr[i] != NULL)
-	{
-		free(arr[i]);
-		i++;
-	}
+		return (NULL);
+	while (i > 0)
+		free(arr[--i]);
 	free(arr);
 	return (NULL);
 }
@@ -77,8 +74,8 @@ char	**ft_split(char const *s, char c)
 	while (i < size_strings)
 	{
 		arr[i] = ft_find_word(s, c, &start);
-			if (!arr[i])
-				return (ft_free_split(arr, i));
+		if (arr[i] == NULL)
+			return (ft_free_split(arr, i));
 		i++;
 	}
 	arr[i] = NULL;
