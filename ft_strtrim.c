@@ -6,16 +6,13 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:38 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/09 20:57:58 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:31:15 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h>
 
-int	ft_theend(char const *s1, char const *set)
+static int	ft_theend(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -43,7 +40,7 @@ int	ft_theend(char const *s1, char const *set)
 	return (end);
 }
 
-int	ft_thestart(char const *s1, char const *set)
+static int	ft_thestart(char const *s1, char const *set)
 {
 	int	i;
 	int	j;

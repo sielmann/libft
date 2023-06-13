@@ -6,11 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:41:36 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/10 14:21:30 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:53:29 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

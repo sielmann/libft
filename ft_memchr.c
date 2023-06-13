@@ -6,11 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:50:27 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 14:42:09 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:52:37 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

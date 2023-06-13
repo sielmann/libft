@@ -6,13 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:34:12 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/07 17:33:30 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:28:19 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

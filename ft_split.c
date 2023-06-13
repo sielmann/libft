@@ -6,13 +6,13 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:07:30 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/06/13 13:29:45 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:55:34 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_howmany2(char const *s, char c)
+static int	ft_howmany2(char const *s, char c)
 {
 	int	is_char;
 	int	count;
@@ -33,7 +33,7 @@ int	ft_howmany2(char const *s, char c)
 	return (count);
 }
 
-void	*ft_free_split(char **arr, size_t i)
+static void	*ft_free_split(char **arr, size_t i)
 {
 	if (arr == NULL)
 		return (NULL);
@@ -43,7 +43,7 @@ void	*ft_free_split(char **arr, size_t i)
 	return (NULL);
 }
 
-char	*ft_find_word(char const *s, char c, size_t *start)
+static char	*ft_find_word(char const *s, char c, size_t *start)
 {
 	size_t	end;
 	char	*word;

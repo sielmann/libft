@@ -6,11 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:41:49 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/12 15:54:03 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:50:08 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

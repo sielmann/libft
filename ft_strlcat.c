@@ -6,26 +6,11 @@
 /*   By: chrmarti <chrmarti@student.42barc...>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 09:50:12 by chrmarti          #+#    #+#             */
-/*   Updated: 2023/05/10 14:23:49 by chrmarti         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:26:22 by chrmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-/*
-#include <stdio.h>
-#include <string.h>
-
-#define BUFFER_SIZE 10
-*/
-unsigned int	ft_sstrlen(const char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -36,8 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	dest_len = ft_sstrlen(dest);
-	src_len = ft_sstrlen(src);
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	if (size <= dest_len || size == 0)
 		return (src_len + size);
 	j = dest_len;
